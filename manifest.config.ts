@@ -21,6 +21,12 @@ export default defineManifest(async (env) => ({
   version_name: version,
   // https://developer.chrome.com/docs/extensions/mv3/manifest/
   description,
+  icons: {
+    "16": "src/assets/icon-16.png",
+    "32": "src/assets/icon-32.png",
+    "48": "src/assets/icon-48.png",
+    "128": "src/assets/icon-128.png",
+  },
   permissions: ["activeTab", "scripting"],
   action: {
     default_popup: "src/popup/index.html",
