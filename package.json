@@ -1,5 +1,6 @@
 {
   "name": "booth-extra-sales-report",
+  "description": "This is a chrome extension that extends reports on BOOTH.",
   "private": true,
   "version": "0.1.0",
   "type": "module",

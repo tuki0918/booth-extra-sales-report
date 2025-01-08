@@ -1,6 +1,6 @@
 import { defineManifest } from "@crxjs/vite-plugin";
 import packageJson from "./package.json";
-const { version } = packageJson;
+const { version, description } = packageJson;
 
 // Convert from Semver (example: 0.1.0-beta6)
 const [major, minor, patch, label = "0"] = version
@@ -20,7 +20,7 @@ export default defineManifest(async (env) => ({
   // semver is OK in "version_name"
   version_name: version,
   // https://developer.chrome.com/docs/extensions/mv3/manifest/
-  description: "",
+  description,
   permissions: ["activeTab", "scripting"],
   action: {
     default_popup: "src/popup/index.html",
