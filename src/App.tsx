@@ -1,7 +1,7 @@
 import Github from "./assets/github-mark.svg";
-const { name, version } = chrome.runtime
+const { name, version_name } = chrome.runtime
   ? chrome.runtime.getManifest()
-  : { name: "[DEV] MY-APP", version: "0.0.0" };
+  : { name: "[DEV] MY-APP", version_name: "0.0.0" };
 
 export default function App() {
   return (
@@ -9,7 +9,7 @@ export default function App() {
       <div className="flex items-center mb-2 border-b pb-2">
         <div>
           <h1 className="text-lg font-semibold text-gray-900">{name}</h1>
-          <p className="text-sm text-gray-500">v{version}</p>
+          <p className="text-sm text-gray-500">v{version_name}</p>
         </div>
       </div>
 
