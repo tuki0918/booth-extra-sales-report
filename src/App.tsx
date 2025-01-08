@@ -1,5 +1,7 @@
-import Github from "../assets/github-mark.svg";
-const { name, version } = chrome.runtime.getManifest();
+import Github from "./assets/github-mark.svg";
+const { name, version } = chrome.runtime
+  ? chrome.runtime.getManifest()
+  : { name: "[DEV] MY-APP", version: "0.0.0" };
 
 export default function App() {
   return (

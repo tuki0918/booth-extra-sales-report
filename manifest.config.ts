@@ -29,7 +29,7 @@ export default defineManifest(async (env) => ({
   },
   permissions: ["activeTab", "scripting"],
   action: {
-    default_popup: "src/popup/index.html",
+    default_popup: "src/index.html",
   },
   content_scripts: [
     {
