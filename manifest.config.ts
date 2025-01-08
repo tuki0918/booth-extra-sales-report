@@ -1,6 +1,6 @@
 import { defineManifest } from "@crxjs/vite-plugin";
 import packageJson from "./package.json";
-const { name, version } = packageJson;
+const { version } = packageJson;
 
 // Convert from Semver (example: 0.1.0-beta6)
 const [major, minor, patch, label = "0"] = version
@@ -11,7 +11,10 @@ const [major, minor, patch, label = "0"] = version
 
 export default defineManifest(async (env) => ({
   manifest_version: 3,
-  name: env.mode === "staging" ? `[INTERNAL] ${name}` : name,
+  name:
+    env.mode === "staging"
+      ? "[INTERNAL] BOOTH Extra Sales Report"
+      : "BOOTH Extra Sales Report",
   // up to four numbers separated by dots
   version: `${major}.${minor}.${patch}.${label}`,
   // semver is OK in "version_name"

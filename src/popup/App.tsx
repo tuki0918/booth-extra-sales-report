@@ -1,6 +1,5 @@
-import packageJson from "../../package.json";
 import Github from "../assets/github-mark.svg";
-const { name, version } = packageJson;
+const { name, version } = chrome.runtime.getManifest();
 
 export default function App() {
   return (
