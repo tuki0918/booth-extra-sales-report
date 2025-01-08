@@ -18,7 +18,17 @@ export default defineManifest(async (env) => ({
   version_name: version,
   // https://developer.chrome.com/docs/extensions/mv3/manifest/
   description: "",
-  permissions: [],
-  action: {},
-  content_scripts: [],
+  permissions: ["activeTab", "scripting"],
+  action: {
+    default_popup: "src/popup/index.html",
+  },
+  content_scripts: [
+    {
+      matches: ["https://manage.booth.pm/sales/daily/recent"],
+      js: ["src/content/index.tsx"],
+    },
+  ],
+  background: {
+    service_worker: "src/background/index.ts",
+  },
 }));
