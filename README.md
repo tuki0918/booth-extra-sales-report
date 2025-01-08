@@ -1,5 +1,7 @@
 # booth-extra-sales-report
 
+This is a chrome extension that extends reports on BOOTH.
+
 ## Installation
 
 ...
